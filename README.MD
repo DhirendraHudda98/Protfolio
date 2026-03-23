@@ -1,21 +1,21 @@
 <div align="center">
 
-# Sunny Patel — 3D Portfolio
+# Dhirendra Hudda — 3D Portfolio
 
 <p align="center">
-	<a href="https://github.com/sunnypatell/react-threejs-portfolio/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/sunnypatell/react-threejs-portfolio?style=social"></a>
-	<a href="https://github.com/sunnypatell/react-threejs-portfolio/network/members"><img alt="Forks" src="https://img.shields.io/github/forks/sunnypatell/react-threejs-portfolio?style=social"></a>
+	<a href="https://github.com/DhirendraHudda98/Protfolio/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/DhirendraHudda98/Protfolio?style=social"></a>
+	<a href="https://github.com/DhirendraHudda98/Protfolio/network/members"><img alt="Forks" src="https://img.shields.io/github/forks/DhirendraHudda98/Protfolio?style=social"></a>
 	<a href="#tech-stack"><img alt="Built with" src="https://img.shields.io/badge/Built%20with-Vite%20·%20React%20·%20Three.js-915EFF"></a>
 	<a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-Custom-blue"></a>
-	<a href="https://www.sunnypatel.net"><img alt="Live" src="https://img.shields.io/badge/live-sunnypatel.net-00C853"></a>
+	<a href="https://DhirendraHudda98.github.io/Protfolio"><img alt="Live" src="https://img.shields.io/badge/live-DhirendraHudda98.github.io/Protfolio-00C853"></a>
 </p>
 
 <p align="center">
-	<a href="https://github.com/sunnypatell/react-threejs-portfolio/issues"><img alt="Issues" src="https://img.shields.io/github/issues/sunnypatell/react-threejs-portfolio?color=%23915EFF"></a>
-	<a href="https://github.com/sunnypatell/react-threejs-portfolio/pulls"><img alt="PRs" src="https://img.shields.io/github/issues-pr/sunnypatell/react-threejs-portfolio?color=%2300B8D9"></a>
-	<img alt="Last commit" src="https://img.shields.io/github/last-commit/sunnypatell/react-threejs-portfolio?color=%23A3E635">
-	<img alt="Top language" src="https://img.shields.io/github/languages/top/sunnypatell/react-threejs-portfolio?color=%23F59E0B">
-	<img alt="Repo size" src="https://img.shields.io/github/repo-size/sunnypatell/react-threejs-portfolio?color=%239999FF">
+	<a href="https://github.com/DhirendraHudda98/Protfolio/issues"><img alt="Issues" src="https://img.shields.io/github/issues/DhirendraHudda98/Protfolio?color=%23915EFF"></a>
+	<a href="https://github.com/DhirendraHudda98/Protfolio/pulls"><img alt="PRs" src="https://img.shields.io/github/issues-pr/DhirendraHudda98/Protfolio?color=%2300B8D9"></a>
+	<img alt="Last commit" src="https://img.shields.io/github/last-commit/DhirendraHudda98/Protfolio?color=%23A3E635">
+	<img alt="Top language" src="https://img.shields.io/github/languages/top/DhirendraHudda98/Protfolio?color=%23F59E0B">
+	<img alt="Repo size" src="https://img.shields.io/github/repo-size/DhirendraHudda98/Protfolio?color=%239999FF">
 	<a href="#contributing"><img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-ff69b4.svg"></a>
 </p>
 
@@ -23,13 +23,13 @@
 
 <p align="center">
 	<picture>
-		<img src="src/assets/logo0.png" alt="Sunny Patel Portfolio" width="220" />
+		<img src="src/assets/logo0.png" alt="Dhirendra Hudda Portfolio" width="220" />
 	</picture>
 </p>
 
 An immersive, performant portfolio powered by React, react-three-fiber (Three.js), and Tailwind CSS — featuring a 3D hero scene, animated skills grid, project gallery with tilt effects, and a production-ready contact form (EmailJS + reCAPTCHA) with a real-time Earth canvas backdrop.
 
-<p align="center"><strong><a href="https://www.sunnypatel.net">Live Demo → sunnypatel.net</a></strong></p>
+<p align="center"><strong><a href="https://DhirendraHudda98.github.io/Protfolio">Live Demo → DhirendraHudda98.github.io/Protfolio</a></strong></p>
 
 <details>
 	<summary><b>Table of Contents</b></summary>
@@ -165,7 +165,7 @@ react-threejs-portfolio/
 ## Deployment
 
 GitHub Pages (current)
-- Custom domain via `CNAME` set to `sunnypatel.net`.
+- Custom domain via `CNAME` set to `DhirendraHudda98.github.io/Protfolio`.
 - Build with `npm run build` and publish `dist/` to Pages (e.g., via Actions or manual).
 
 Vercel (optional)
@@ -211,7 +211,7 @@ Suggested commit style: conventional commits (e.g., `feat: add mobile camera pre
 ## Security
 
 - Do not commit secrets. Use `.env.local` for EmailJS and reCAPTCHA keys.
-- Report vulnerabilities privately via email: `sunnypatel124555@gmail.com`.
+- Report vulnerabilities privately via email: `dhirendrahudda@gmail.com`.
 
 ## FAQ
 
@@ -227,11 +227,11 @@ Suggested commit style: conventional commits (e.g., `feat: add mobile camera pre
 <table>
 	<tr>
 		<td width="80">
-			<img src="src/assets/pfp.png" width="72" height="72" style="border-radius:50%" alt="Sunny Patel" />
+			<img src="src/assets/Protfilio.png" width="72" height="72" style="border-radius:50%" alt="Dhirendra Hudda" />
 		</td>
 		<td>
-			<b>Sunny Patel</b><br/>
-			<a href="https://www.sunnypatel.net">Website</a> • <a href="mailto:sunnypatel124555@gmail.com">Email</a> • <a href="https://www.linkedin.com/in/sunny-patel-30b460204/">LinkedIn</a>
+			<b>Dhirendra Hudda</b><br/>
+			<a href="https://DhirendraHudda98.github.io/Protfolio">Website</a> • <a href="mailto:dhirendrahudda@gmail.com">Email</a> • <a href="https://www.linkedin.com/in/dhirendra12/">LinkedIn</a>
 		</td>
 	</tr>
 	<tr>
@@ -248,7 +248,8 @@ This project is open source. See `LICENSE` for terms. Third-party 3D assets are 
 
 ## Contact
 
-- Portfolio: https://www.sunnypatel.net
-- Email: sunnypatel124555@gmail.com
-- LinkedIn: https://www.linkedin.com/in/sunny-patel-30b460204/
+- Portfolio: https://DhirendraHudda98.github.io/Protfolio
+- Email: dhirendrahudda@gmail.com
+- LinkedIn: https://www.linkedin.com/in/dhirendra12/
+
 

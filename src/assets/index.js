@@ -1,4 +1,4 @@
-import profilepic from './profile.png';
+import profilepic from "./Protfilio.png";
 
 import logo from "./logo0.png";
 import backend from "./backend.png";
@@ -76,8 +76,6 @@ import atsscreenerlanding from "./atsscreenerlanding.png"
  
 // Use the stable route; dev/prod redirect to /resume/<basename>
 const resume = "/resume";
-import awsdbcert from "./AWS Database Specialty Certified - Sunny Jayendra Patel.jpg"
-import connectwisecert from "./Connectwise-Scripting-Certification.pdf"
 
 export {
   logo,
@@ -137,8 +135,6 @@ export {
   cinema4d,
   // blender,  // unused - not in Tech.jsx
   resume,
-  awsdbcert,
-  connectwisecert,
   // financialflowimage,
   atsscreenerlanding,
   // enterpriseapitester,

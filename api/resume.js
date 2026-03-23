@@ -46,7 +46,7 @@ export default async function handler(req, res) {
     // If request path is /api/resume exactly, redirect to /resume/<filename>
     // so the browser's address bar reflects the actual filename (affects tab title)
     const url = req.url || '';
-    // If a name segment is provided (e.g., /api/resume/Resume-Sunny-Patel),
+    // If a name segment is provided (e.g., /api/resume/Dhirendra-Hudda-CV),
     // try to serve the matching file ignoring extension.
     // If a specific basename is requested, try to match it ignoring extension
     const match = url.match(/^\/api\/resume\/(.+)$/);
