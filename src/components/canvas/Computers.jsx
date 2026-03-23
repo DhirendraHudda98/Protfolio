@@ -69,7 +69,7 @@ const ComputersCanvas = () => {
         { position: [0, 0, 20], fov: 50 } : 
         { position: [20, 3, 5], fov: 25 }
       }
-      gl={{ preserveDrawingBuffer: true }}
+      gl={{ preserveDrawingBuffer: true, alpha: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
         {!isMobile && (

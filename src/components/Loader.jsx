@@ -13,13 +13,18 @@ const CanvasLoader = () => {
     }
   }, [progress]);
 
+  useEffect(() => {
+    const maxWait = setTimeout(() => setShowLoader(false), 5000);
+    return () => clearTimeout(maxWait);
+  }, []);
+
   if (!showLoader) return null;
 
   return (
     <Html
       as="div"
       center
-      className="w-full h-full flex justify-center items-center bg-black bg-opacity-80"
+      className="w-full h-full flex justify-center items-center"
     >
       <div className="text-center flex flex-col items-center">
         <div className="loader mb-4"></div>

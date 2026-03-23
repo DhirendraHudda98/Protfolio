@@ -10,27 +10,14 @@ import {
   javascript,
   java,
   cplusplus,
-  typescript,
-  docker,
   tailwind,
   reactjs,
   postgresql,
   mongodb,
-  threejs,
-  aws,
-  ubuntu,
-  powershell,
-  azure,
-  cisco,
-  connectwise,
-  virtualbox,
-  kalilinux,
-  wireshark,
-  nmap,
-  johntheripper,
-  photoshop,
-  premiere,
-  cinema4d,
+  github,
+  web,
+  backend,
+  fullstack,
 } from "../assets";
 
 const programming = [
@@ -38,33 +25,25 @@ const programming = [
   { name: "Java", icon: java },
   { name: "C++", icon: cplusplus },
   { name: "JavaScript", icon: javascript },
-  { name: "TypeScript", icon: typescript },
-  { name: "Docker", icon: docker },
   { name: "Tailwind CSS", icon: tailwind },
   { name: "React JS", icon: reactjs },
-  { name: "PostgreSQL", icon: postgresql },
+  { name: "Node.js", icon: backend },
+  { name: "Express.js", icon: web },
   { name: "MongoDB", icon: mongodb },
-  { name: "Three.js", icon: threejs },
+  { name: "MySQL", icon: postgresql },
 ];
 
 const itTools = [
-  { name: "AWS", icon: aws },
-  { name: "Ubuntu", icon: ubuntu },
-  { name: "PowerShell", icon: powershell },
-  { name: "Azure", icon: azure },
-  { name: "Cisco", icon: cisco },
-  { name: "ConnectWise", icon: connectwise },
-  { name: "VirtualBox", icon: virtualbox },
-  { name: "Kali Linux", icon: kalilinux },
-  { name: "Wireshark", icon: wireshark },
-  { name: "Nmap", icon: nmap },
-  { name: "John the Ripper", icon: johntheripper },
+  { name: "GitHub", icon: github },
+  { name: "REST API Design", icon: backend },
+  { name: "Problem Solving", icon: fullstack },
+  { name: "Team Collaboration", icon: web },
 ];
 
 const contentProduction = [
-  { name: "Photoshop", icon: photoshop },
-  { name: "Premiere Pro", icon: premiere },
-  { name: "Cinema 4D", icon: cinema4d },
+  { name: "HTML5", icon: web },
+  { name: "CSS3", icon: tailwind },
+  { name: "Responsive UI", icon: reactjs },
 ];
 
 const Tech = () => {
@@ -149,9 +128,9 @@ const Tech = () => {
     }
   };
 
-  const renderCategory = (categoryName, categoryRows) => (
+  const renderCategory = (displayName, categoryRows) => (
     <motion.div
-      key={categoryName}
+      key={displayName}
       className="category-container"
       initial="hidden"
       animate={mainControls}
@@ -176,11 +155,11 @@ const Tech = () => {
           textFillColor: "transparent",
           filter: "drop-shadow(0 0 10px #915EFF)",
         }}
-      >{`<${categoryName}>`}</motion.h2>
+      >{displayName}</motion.h2>
       <div className="honeycomb-grid">
         {categoryRows?.map((row, rowIndex) => (
           <div
-            key={`${categoryName}-row-${rowIndex}`}
+            key={`${displayName}-row-${rowIndex}`}
             className={`honeycomb-row ${rowIndex % 2 === 1 ? "staggered-row" : ""}`}
           >
             {row.map((tech) => (
@@ -192,29 +171,13 @@ const Tech = () => {
                 animate="visible"
                 whileHover="hover"
               >
-                <img src={tech.icon} alt={tech.name}  style={{ userSelect: "none" }} draggable="false"/>
+                <img src={tech.icon} alt={tech.name} style={{ userSelect: "none" }} draggable="false" />
+                <span className="skill-name">{tech.name}</span>
               </motion.div>
             ))}
           </div>
         ))}
       </div>
-      <motion.h2
-        className="category-title bottom"
-        variants={{
-          hidden: { opacity: 0, y: 20 },
-          visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-        }}
-        style={{
-          fontFamily: "'', cursive",
-          fontSize: "26px",
-          background: "linear-gradient(90deg, #915EFF, #00BFFF)",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-          backgroundClip: "text",
-          textFillColor: "transparent",
-          filter: "drop-shadow(0 0 10px #915EFF)",
-        }}
-      >{`</${categoryName}>`}</motion.h2>
     </motion.div>
   );
 
@@ -225,9 +188,9 @@ const Tech = () => {
           <p className={`${styles.sectionSubText} text-center`}>Technical Proficiencies</p>
           <h2 className={`${styles.sectionHeadText} text-center`}>Skills.</h2>
         </motion.div>
-        {renderCategory("programming", rows.programming)}
-        {renderCategory("itTools", rows.itTools)}
-        {renderCategory("contentProduction", rows.contentProduction)}
+        {renderCategory("Languages and Frameworks", rows.programming)}
+        {renderCategory("Tools and Strengths", rows.itTools)}
+        {renderCategory("Frontend and UI", rows.contentProduction)}
       </div>
     </section>
   );

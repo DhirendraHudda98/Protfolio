@@ -1,4 +1,4 @@
-import profilepic from './pfp.png';
+import profilepic from './profile.png';
 
 import logo from "./logo0.png";
 import backend from "./backend.png";
@@ -62,6 +62,9 @@ import ibm from "./company/ibm.svg";
 import axelotlanding from "./axelotlanding.png"
 import netdashlanding from "./netdashlanding.png"
 import securebankdashboard from "./securebankdash.jpg"
+import campuscodeImage from "./Campuscode.png"
+import bikeImage from "./bike.png"
+import protfilioImage from "./Protfilio.png"
 import sunnifyimage from "./demonstration 2.jpg"
 import knifethrowimage from "./knifethrow_demonstration.jpg"
 // import pythonanalysis from "./data_analysis.png"
@@ -107,6 +110,9 @@ export {
   axelotlanding,
   netdashlanding,
   securebankdashboard,
+  campuscodeImage,
+  bikeImage,
+  protfilioImage,
   sunnifyimage,
   knifethrowimage,
   // pythonanalysis,

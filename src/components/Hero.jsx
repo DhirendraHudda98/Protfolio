@@ -70,14 +70,14 @@ const WavingHand = () => {
 
 const Hero = () => {
   const typedItems = [
-    "Software Developer",
-    "Systems Administrator",
-    "Computer Enthusiast",
-    "Team Leader"
+    "Full-Stack Developer",
+    "MERN Stack Enthusiast",
+    "Problem Solver",
+    "Continuous Learner"
   ];
 
   return (
-    <section className="relative w-full h-screen mx-auto">
+    <section className="relative w-full h-screen mx-auto overflow-hidden">
       <style jsx>{`
         @keyframes wave {
           0% { transform: rotate(0deg); }
@@ -96,7 +96,7 @@ const Hero = () => {
           display: inline-block;
         }
       `}</style>
-      <div className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}>
+      <div className={`absolute inset-0 top-[120px] z-20 max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}>
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
@@ -104,20 +104,23 @@ const Hero = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className="text-[#915EFF]">Sunny</span> <WavingHand />
+            Hi, I'm <span className="text-[#915EFF]">Dhirendra</span> <WavingHand />
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             I'm a <TypewriterText texts={typedItems} />
             <br />
-            <b>Welcome to my portfolio, please view on desktop for an interactive experience!</b>
+            <b>Welcome to my portfolio. Explore my projects, skills, and journey.</b>
           </p>
         </div>
       </div>
       <br /><br /><br />
 
-      <ComputersCanvas />
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#0f1026] via-[#111132] to-[#0a0a1a]" />
+      <div className="absolute inset-0 z-10 opacity-95">
+        <ComputersCanvas />
+      </div>
 
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
+      <div className="absolute xs:bottom-10 bottom-32 z-20 w-full flex justify-center items-center">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div

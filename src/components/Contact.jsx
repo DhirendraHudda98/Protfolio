@@ -8,7 +8,6 @@ import Confetti from "react-confetti"
 import ReCAPTCHA from "react-google-recaptcha"
 
 import { styles } from "../styles"
-import { EarthCanvas } from "./canvas"
 import { SectionWrapper } from "../hoc"
 import { slideIn } from "../utils/motion"
 
@@ -32,6 +31,7 @@ const Contact = () => {
     width: window.innerWidth,
     height: window.innerHeight,
   })
+  const recaptchaSiteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY
 
   const detectSize = () => {
     setWindowDimension({
@@ -75,7 +75,7 @@ const Contact = () => {
       return
     }
 
-    if (!captchaToken) {
+    if (recaptchaSiteKey && !captchaToken) {
       toast("Hold up! Gotta make sure you're not a spam bot, checkmark the CAPTCHA! 🧠🤖", {
         icon: "🛡️",
         duration: 3500,
@@ -92,9 +92,9 @@ const Contact = () => {
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "Sunny Patel",
+          to_name: "Dhirendra Hudda",
           from_email: form.email,
-          to_email: "sunnypatel124555@gmail.com",
+          to_email: "dhirendrahudda@gmail.com",
           message: form.message,
         },
         import.meta.env.VITE_EMAIL_JS_ACCESS_TOKEN,
@@ -150,11 +150,11 @@ const Contact = () => {
         <div className="flex justify-between items-center mb-4">
           <p className={styles.sectionSubText}>Get in touch</p>
           <a
-            href="tel:+14372161611"
+            href="tel:+919799279475"
             className="text-purple-400 hover:text-purple-300 transition-all duration-300 flex items-center gap-2 hover:gap-3 group"
           >
             <FontAwesomeIcon icon={faPhone} className="group-hover:rotate-12 transition-transform duration-300" />
-            <span className="font-medium">(437) 216-1611</span>
+            <span className="font-medium">+91 97992 79475</span>
           </a>
         </div>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -204,22 +204,30 @@ const Contact = () => {
               name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder="Hey Sunny, love the website! I'd like to chat about some opportunities you might like! 🎉"
+              placeholder="Hi Dhirendra, I saw your portfolio and would like to connect with you."
               className="bg-black-100/50 backdrop-blur-sm py-4 px-6 placeholder:text-secondary text-white rounded-xl outline-none border-2 border-white/20 font-medium transition-all duration-300 focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500 focus:bg-black-100/70 hover:border-white/30 resize-none"
             />
           </label>
 
-          <div className="flex justify-center">
-            <div className="rounded-lg overflow-hidden shadow-lg">
-              <ReCAPTCHA
-                sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-                onChange={(token) => setCaptchaToken(token)}
-                theme="dark"
-                ref={captchaRef}
-              />
-            </div>
-          </div>
-          <span className="text-xs text-gray-400 text-center -mt-4">Protected by reCAPTCHA Enterprise. ⚔️</span>
+          {recaptchaSiteKey ? (
+            <>
+              <div className="flex justify-center">
+                <div className="rounded-lg overflow-hidden shadow-lg">
+                  <ReCAPTCHA
+                    sitekey={recaptchaSiteKey}
+                    onChange={(token) => setCaptchaToken(token)}
+                    theme="dark"
+                    ref={captchaRef}
+                  />
+                </div>
+              </div>
+              <span className="text-xs text-gray-400 text-center -mt-4">Protected by reCAPTCHA Enterprise.</span>
+            </>
+          ) : (
+            <span className="text-xs text-gray-400 text-center -mt-4">
+              CAPTCHA is disabled until VITE_RECAPTCHA_SITE_KEY is set.
+            </span>
+          )}
 
           <button
             type="submit"
@@ -250,9 +258,10 @@ const Contact = () => {
         </form>
       </motion.div>
 
-      <motion.div variants={slideIn("right", "tween", 0.2, 1)} className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]">
-        <EarthCanvas />
-      </motion.div>
+      <motion.div
+        variants={slideIn("right", "tween", 0.2, 1)}
+        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] rounded-2xl border border-white/10 bg-gradient-to-br from-[#171933] via-[#12142a] to-[#0d0f21]"
+      />
     </div>
   )
 }

@@ -118,13 +118,27 @@
 }
 
 .honeycomb-row .hexagon img {
-  width: 80px; /* Smaller and consistent image size */
-  height: 100px;
+  width: 64px;
+  height: 64px;
   background-color: transparent; /* Transparent to blend with hexagon background */
   padding: 0; /* Remove padding */
   position: relative;
   z-index: 2;
   transition: all 0.3s ease;
+  margin-bottom: 24px;
+}
+
+.honeycomb-row .hexagon .skill-name {
+  position: absolute;
+  bottom: 20px;
+  left: 8px;
+  right: 8px;
+  z-index: 2;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: #e5e7eb;
+  line-height: 1.2;
 }
 
 .honeycomb-row .hexagon:hover {
@@ -160,8 +174,14 @@
   }
 
   .honeycomb-row .hexagon img {
-    width: 60px;
-    height: 75px;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 20px;
+  }
+
+  .honeycomb-row .hexagon .skill-name {
+    font-size: 10px;
+    bottom: 14px;
   }
 
   /* Remove stagger effect for smaller screens */
