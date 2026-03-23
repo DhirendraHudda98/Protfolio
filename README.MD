@@ -3,31 +3,12 @@
 # Dhirendra Hudda — 3D Portfolio
 
 <p align="center">
-	<a href="https://github.com/DhirendraHudda98/Protfolio/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/DhirendraHudda98/Protfolio?style=social"></a>
-	<a href="https://github.com/DhirendraHudda98/Protfolio/network/members"><img alt="Forks" src="https://img.shields.io/github/forks/DhirendraHudda98/Protfolio?style=social"></a>
-	<a href="#tech-stack"><img alt="Built with" src="https://img.shields.io/badge/Built%20with-Vite%20·%20React%20·%20Three.js-915EFF"></a>
-	<a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-Custom-blue"></a>
-	<a href="https://DhirendraHudda98.github.io/Protfolio"><img alt="Live" src="https://img.shields.io/badge/live-DhirendraHudda98.github.io/Protfolio-00C853"></a>
-</p>
-
-<p align="center">
-	<a href="https://github.com/DhirendraHudda98/Protfolio/issues"><img alt="Issues" src="https://img.shields.io/github/issues/DhirendraHudda98/Protfolio?color=%23915EFF"></a>
-	<a href="https://github.com/DhirendraHudda98/Protfolio/pulls"><img alt="PRs" src="https://img.shields.io/github/issues-pr/DhirendraHudda98/Protfolio?color=%2300B8D9"></a>
-	<img alt="Last commit" src="https://img.shields.io/github/last-commit/DhirendraHudda98/Protfolio?color=%23A3E635">
-	<img alt="Top language" src="https://img.shields.io/github/languages/top/DhirendraHudda98/Protfolio?color=%23F59E0B">
-	<img alt="Repo size" src="https://img.shields.io/github/repo-size/DhirendraHudda98/Protfolio?color=%239999FF">
-	<a href="#contributing"><img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-ff69b4.svg"></a>
+	<img src="src/assets/Protfilio.png" alt="Dhirendra Hudda" width="180" height="180" style="border-radius:10px; margin: 20px 0;" />
 </p>
 
 </div>
 
-<p align="center">
-	<picture>
-		<img src="src/assets/logo0.png" alt="Dhirendra Hudda Portfolio" width="220" />
-	</picture>
-</p>
-
-An immersive, performant portfolio powered by React, react-three-fiber (Three.js), and Tailwind CSS — featuring a 3D hero scene, animated skills grid, project gallery with tilt effects, and a production-ready contact form (EmailJS + reCAPTCHA) with a real-time Earth canvas backdrop.
+An immersive, performant portfolio powered by React, react-three-fiber (Three.js), and Tailwind CSS — featuring a 3D hero scene, animated skills grid, project gallery with tilt effects, and a production-ready contact form (EmailJS + reCAPTCHA).
 
 <p align="center"><strong><a href="https://DhirendraHudda98.github.io/Protfolio">Live Demo → DhirendraHudda98.github.io/Protfolio</a></strong></p>
 
@@ -56,9 +37,8 @@ An immersive, performant portfolio powered by React, react-three-fiber (Three.js
 </details>
 
 ## Overview
-![](SPLASHSCREEN.png)
 
-This project is a modern single-page application scaffolded with Vite and styled with Tailwind CSS, using react-three-fiber and drei to render high-fidelity 3D scenes. Animations are orchestrated with Framer Motion, and analytics are integrated via `@vercel/analytics`.
+This project is a modern single-page application scaffolded with Vite and styled with Tailwind CSS, using react-three-fiber and drei to render high-fidelity 3D scenes. Animations are orchestrated with Framer Motion.
 
 The site includes a custom domain via GitHub Pages CNAME and can also be deployed to Vercel or any static host.
 
