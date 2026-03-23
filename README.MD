@@ -6,7 +6,7 @@
 	<a href="https://github.com/DhirendraHudda98/Protfolio/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/DhirendraHudda98/Protfolio?style=social"></a>
 	<a href="https://github.com/DhirendraHudda98/Protfolio/network/members"><img alt="Forks" src="https://img.shields.io/github/forks/DhirendraHudda98/Protfolio?style=social"></a>
 	<a href="#tech-stack"><img alt="Built with" src="https://img.shields.io/badge/Built%20with-Vite%20·%20React%20·%20Three.js-915EFF"></a>
-	<a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-Custom-blue"></a>
+	
 	<a href="https://DhirendraHudda98.github.io/Protfolio"><img alt="Live" src="https://img.shields.io/badge/live-DhirendraHudda98.github.io/Protfolio-00C853"></a>
 </p>
 
