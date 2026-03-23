@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const TypewriterText = ({ texts }) => {
   const [displayText, setDisplayText] = useState("");
@@ -59,16 +59,15 @@ const TypewriterText = ({ texts }) => {
 
 const WavingHand = () => {
   return (
-    <img 
-      src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f44b.png" 
+    <img
+      src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f44b.png"
       alt="Waving Hand"
-      className="wave-emoji"
-      style={{ display: 'inline-block', marginLeft: '10px', width: '50px', height: '50px' }}
+      className="wave-emoji inline-block w-8 h-8 xs:w-9 xs:h-9 sm:w-10 sm:h-10 lg:w-11 lg:h-11"
     />
   );
 };
 
-const Hero = () => {
+const Hero = ({ weatherMode = "snow", setWeatherMode = () => {} }) => {
   const typedItems = [
     "MERN Stack Developer",
     "Problem Solver",
@@ -96,15 +95,35 @@ const Hero = () => {
           display: inline-block;
         }
       `}</style>
-      <div className={`absolute inset-0 top-[120px] z-20 max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}>
+      <div className="absolute top-6 right-6 z-30 hidden xs:flex items-center bg-black/30 backdrop-blur-md border border-white/10 rounded-xl px-3 py-2">
+        <label htmlFor="weather-mode" className="text-[11px] uppercase tracking-wide text-gray-200 mr-2">
+          Weather
+        </label>
+        <select
+          id="weather-mode"
+          value={weatherMode}
+          onChange={(event) => setWeatherMode(event.target.value)}
+          className="bg-[#111132] text-white text-sm rounded-md px-2 py-1 outline-none border border-white/20"
+        >
+          <option value="clear">Clear</option>
+          <option value="rain">Rain</option>
+          <option value="snow">Snow</option>
+          <option value="fog">Fog</option>
+          <option value="storm">Storm</option>
+        </select>
+      </div>
+      <div className={`absolute inset-0 top-[105px] sm:top-[120px] z-20 max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}>
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
         </div>
 
-        <div>
+        <div className="max-w-3xl">
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className="text-[#915EFF]">Dhirendra Hudda</span> <WavingHand />
+            Hi, I&apos;m{" "}
+            <span className="text-[#915EFF] inline-flex items-center gap-2 align-middle">
+              Dhirendra Hudda <WavingHand />
+            </span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             I'm a <TypewriterText texts={typedItems} />
@@ -113,11 +132,10 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <br /><br /><br />
 
       <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#0f1026] via-[#111132] to-[#0a0a1a]" />
       <div className="absolute inset-0 z-10 opacity-95">
-        <ComputersCanvas />
+        <ComputersCanvas weatherMode={weatherMode} />
       </div>
 
       <div className="absolute xs:bottom-10 bottom-32 z-20 w-full flex justify-center items-center">

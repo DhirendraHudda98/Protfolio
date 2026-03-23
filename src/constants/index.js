@@ -144,6 +144,19 @@ const experiences = [
 
 const extracurricular = [
   {
+    title: "Cloud Computing",
+    type: "NPTEL",
+    icon: aws,
+    iconBg: "#ffffff",
+    date: "Jan 2025 - Apr 2025 (12 weeks)",
+    points: [
+      "Credits Recommended: 3 or 4.",
+      "Project Title: Cloud Computing Concepts and Applications.",
+      "Tools/Platforms: Cloud platforms (AWS/Azure) and Virtual Machines.",
+    ],
+    credential: "https://nptel.ac.in/",
+  },
+  {
     title: "Build and Deploy Apps with Google AI Studio",
     type: "HCL GUVI",
     icon: google,

@@ -3,7 +3,7 @@
 # Dhirendra Hudda — 3D Portfolio
 
 <p align="center">
-	<img src="src/assets/Protfilio.png" alt="Dhirendra Hudda" width="180" height="180" style="border-radius:10px; margin: 20px 0;" />
+	<img src="src/assets/profile.png" alt="Dhirendra Hudda" width="180" height="180" style="border-radius:10px; margin: 20px 0;" />
 </p>
 
 </div>
@@ -207,7 +207,7 @@ Suggested commit style: conventional commits (e.g., `feat: add mobile camera pre
 <table>
 	<tr>
 		<td width="80">
-			<img src="src/assets/Protfilio.png" width="72" height="72" style="border-radius:50%" alt="Dhirendra Hudda" />
+			<img src="src/assets/profile.png" width="72" height="72" style="border-radius:50%" alt="Dhirendra Hudda" />
 		</td>
 		<td>
 			<b>Dhirendra Hudda</b><br/>

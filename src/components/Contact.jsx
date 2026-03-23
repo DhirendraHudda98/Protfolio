@@ -5,19 +5,17 @@ import { motion } from "framer-motion"
 import emailjs from "@emailjs/browser"
 import { Toaster, toast } from "react-hot-toast"
 import Confetti from "react-confetti"
-import ReCAPTCHA from "react-google-recaptcha"
 
 import { styles } from "../styles"
 import { SectionWrapper } from "../hoc"
 import { slideIn } from "../utils/motion"
+import { EarthCanvas } from "./canvas"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUser, faEnvelope, faComment, faPaperPlane, faSpinner, faPhone } from "@fortawesome/free-solid-svg-icons"
 
 const Contact = () => {
   const formRef = useRef()
-  const captchaRef = useRef()
-  const [captchaToken, setCaptchaToken] = useState(null)
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -31,7 +29,6 @@ const Contact = () => {
     width: window.innerWidth,
     height: window.innerHeight,
   })
-  const recaptchaSiteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY
 
   const detectSize = () => {
     setWindowDimension({
@@ -75,15 +72,6 @@ const Contact = () => {
       return
     }
 
-    if (recaptchaSiteKey && !captchaToken) {
-      toast("Hold up! Gotta make sure you're not a spam bot, checkmark the CAPTCHA! 🧠🤖", {
-        icon: "🛡️",
-        duration: 3500,
-        position: "bottom-right",
-      })
-      return
-    }
-
     setLoading(true)
 
     emailjs
@@ -109,8 +97,6 @@ const Contact = () => {
             position: "bottom-right",
           })
           setShowConfetti(true)
-          setCaptchaToken(null)
-          captchaRef.current.reset()
           setTimeout(() => {
             setSuccess(false)
             setShowConfetti(false)
@@ -209,26 +195,6 @@ const Contact = () => {
             />
           </label>
 
-          {recaptchaSiteKey ? (
-            <>
-              <div className="flex justify-center">
-                <div className="rounded-lg overflow-hidden shadow-lg">
-                  <ReCAPTCHA
-                    sitekey={recaptchaSiteKey}
-                    onChange={(token) => setCaptchaToken(token)}
-                    theme="dark"
-                    ref={captchaRef}
-                  />
-                </div>
-              </div>
-              <span className="text-xs text-gray-400 text-center -mt-4">Protected by reCAPTCHA Enterprise.</span>
-            </>
-          ) : (
-            <span className="text-xs text-gray-400 text-center -mt-4">
-              CAPTCHA is disabled until VITE_RECAPTCHA_SITE_KEY is set.
-            </span>
-          )}
-
           <button
             type="submit"
             className="relative bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 overflow-hidden group"
@@ -260,8 +226,10 @@ const Contact = () => {
 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] rounded-2xl border border-white/10 bg-gradient-to-br from-[#171933] via-[#12142a] to-[#0d0f21]"
-      />
+        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] rounded-2xl border border-white/10 bg-gradient-to-br from-[#171933] via-[#12142a] to-[#0d0f21] overflow-hidden"
+      >
+        <EarthCanvas />
+      </motion.div>
     </div>
   )
 }
